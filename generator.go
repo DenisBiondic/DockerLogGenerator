@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"os"
 	"time"
 )
 
@@ -21,7 +20,6 @@ func generate() {
 		generateSimpleLogLine()
 		generateJsonLogLine()
 		generateMultilineLogLine()
-		generateErrorLogLine()
 
 		time.Sleep(5 * time.Second)
 	}
@@ -39,8 +37,4 @@ func generateJsonLogLine() {
 
 func generateMultilineLogLine() {
 	fmt.Printf("[DockerLogGenerator] Multiline: %v\n This is the second line\nThis is the third line\n", time.Now())
-}
-
-func generateErrorLogLine() {
-	fmt.Fprintf(os.Stderr, "[DockerLogGenerator] This is an error, occured at %v", time.Now())
 }
