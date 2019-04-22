@@ -5,6 +5,7 @@ This is a simple containarized Go application which outputs several log messages
 # Running locally
 
 `docker build -t log-generator .`
+
 `docker run -it --rm log-generator`
 
 # Deploy to Kubernetes
