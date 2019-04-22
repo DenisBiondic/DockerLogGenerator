@@ -17,7 +17,7 @@ spec:
       containers:
       - name: docker-log-generator
         imagePullPolicy: Always
-        image: coffeeapplied/dockerloggenerator:1.0.0
+        image: coffeeapplied/dockerloggenerator:1.0.1
         resources:
           requests:
             cpu: 50m

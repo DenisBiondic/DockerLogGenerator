@@ -42,5 +42,5 @@ func generateMultilineLogLine() {
 }
 
 func generateErrorLogLine() {
-	os.Stderr.WriteString("[DockerLogGenerator] This is an error, occured at " + fmt.Sprintf("%v", time.Now()))
+	fmt.Fprintf(os.Stderr, "[DockerLogGenerator] This is an error, occured at %v", time.Now())
 }
