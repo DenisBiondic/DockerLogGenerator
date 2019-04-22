@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-log-generator
+  labels:
+    app: docker-log-generator
+spec:
+  selector:
+    matchLabels:
+      app: docker-log-generator
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: docker-log-generator
+    spec:
+      containers:
+      - name: docker-log-generator
+        imagePullPolicy: Always
+        image: coffeeapplied/dockerloggenerator:1.0.0
+        resources:
+          requests:
+            cpu: 50m
+            memory: 50Mi
+          limits:
+            cpu: 100m
+            memory: 100Mi
